@@ -150,7 +150,7 @@ function profileimageurl_civicrm_searchColumns($objectName, &$headers, &$rows, &
   if ($objectName == 'profile') {
     $imageUrlKey = NULL;
     foreach ($headers as $key => $header) {
-      if ($header['field_name'] == 'image_URL') {
+      if (CRM_Utils_Array::value('field_name', $header) == 'image_URL') {
         $imageUrlKey = $key;
         break;
       }
