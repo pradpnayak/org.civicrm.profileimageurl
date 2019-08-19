@@ -146,7 +146,7 @@ function profileimageurl_civicrm_themes(&$themes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_searchColumns
  */
-function caseactivitysection_civicrm_searchColumns($objectName, &$headers, &$rows, &$selector) {
+function profileimageurl_civicrm_searchColumns($objectName, &$headers, &$rows, &$selector) {
   if ($objectName == 'profile') {
     $imageUrlKey = NULL;
     foreach ($headers as $key => $header) {
@@ -155,6 +155,7 @@ function caseactivitysection_civicrm_searchColumns($objectName, &$headers, &$row
         break;
       }
     }
+
     if (is_null($imageUrlKey)) {
       return;
     }
